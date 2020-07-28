@@ -68,33 +68,35 @@ img {
  margin: 0 auto;
  max-width: 960px;
  padding-top: 30px;
-
+ 
+}
+.cart{
+    padding-right: 42px;
 }
 .flip, .logonew
 {
     display: none;
 }
 
-
+.option a {
+    color: #3F5D45;
+}
 
 .option li,.option ul{
     display: flex;
     justify-content: space-evenly;
-      margin-right:42px;
-     
+      margin-right:42px; 
     
-  
   }
   .option,.header{
         display: flex;
       justify-content: space-between;
       align-items: center;
-     
-    
     
   }
 
 .banner{
+
 margin-bottom: 60px;
 margin-top: 30px;
   
@@ -102,11 +104,10 @@ margin-top: 30px;
 .content {
     display: flex;
     justify-content: space-between;
+   padding-right:20px;
 }
 
 
-
-/* 妳 item 就綁在 ul 上，所以直接寫 .item 即可 */
 .item {
 
     width:70%;
@@ -125,14 +126,24 @@ flex-direction: row-reverse;
     font-size: 24px;
 }
 
-
-.category a {
-    
-    padding: 16px 0px;
-    display: block;
-    color: #3F5D45;
-
+.category ul li:hover{
+    background-color: #EAF0ED;
 }
+.category h1{
+    border:1px #EAF0ED solid;
+    padding:16px 64px;
+    background-color:#3F5D45;
+    color:#EAF0ED;
+    
+    }
+    
+    .category ul li{
+   
+    border:1px #EAF0ED solid;
+    padding:16px;
+    font-size:px;
+}
+
 
 .favorite{
     display: block;
@@ -193,41 +204,42 @@ flex-direction: row-reverse;
 }
 
 
-.name p {
- 
-     height: 24px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #3F5D45;
-    padding-right:30px;
-    padding-bottom: 30px;
-}
 
-.name span {
+.name{
     display: flex;
     justify-content: space-between;
-    padding-top: 14px;
-    padding-left: 58px;
     font-weight: light;
+    border-left: 1px solid #EAF0ED;
+    border-right: 1px solid #EAF0ED;
+}
+.name h1{
+    padding:14px 33px;
+    border-right: 1px solid #EAF0ED;
+}
+.name p{
+    padding:14px 20px 25px;
 }
 
-.pages {
+.pages img{
+    padding:18px;
+}
+.pages ul{
     display: flex;
     border: 1px solid #EAF0ED;
+}
+
+.pages{
+   
+    display: flex;
+ padding-left: 640px;
+width: 300px;
+    height: 60px;
+    margin-top: 30px;
     margin-bottom: 60px;
 }
-
-.pages img {
-    padding: 18px;
-}
-
-.pages p {
-    font-size: 20px;
-}
-
 .pages p a {
   text-decoration:none;
-    padding: 16px 24px;
+    padding: 20px 24px;
     display: block;
     color: #3F5D45;
 }
@@ -316,7 +328,7 @@ flex-direction: row;
     flex-direction: row-reverse;
  
 }
-.slogan h1{
+.slogan p{
     color: #3F5D45;
     font-family: 'Noto Serif TC', 'Microsoft MingLiU', serif;
     font-size: 22px;
@@ -325,7 +337,7 @@ flex-direction: row;
     padding-bottom: 130px;
 
 }
-.slogan h1:last-of-type{
+.slogan p:last-of-type{
     padding-top: 10px;
 }
 
@@ -338,8 +350,15 @@ flex-direction: row;
 
 
 
-@media only screen and (max-width: 768px) {
-  .favorite{
+@media only screen and (max-width: 940px) {
+    .pages{
+        padding: 30px;
+    margin:auto;
+    }
+  .header{
+      padding-top:33px;
+  }
+    .favorite{
       top: 30px;
       right: 22.2px;
   }
@@ -362,9 +381,8 @@ flex-direction: row;
     }
    
     .footer,.subscribe{
-        display: flex;
         flex-direction: column;
-        align-items: center;   
+      
     }
     .left img{
 
@@ -379,31 +397,25 @@ flex-direction: row;
        font-size: 16px;
    }
    .category{
-  
-    /*  修改開始，寬度要覆蓋原本 PC 的寬度，寬度才會產生出來  */
+
         width: 90%;
        margin: 0 auto;
-    /*  修改結束  */
+  
     }
    
  .content{
-/*      align-items: center; //希望的結果
-    margin-right: 5%;//希望的結果 */
-/* 修改開始  */
-
 padding-top: 30px;
-display: flex;
+
   flex-direction: column;
   align-items: center;
- 
-/*   修改結束  */
+
  }
 
  .product,.dessert,.name,.tag{
-/*   修改開始   */
+
       width: 100%;  
       margin-top: 10px;
-/*   修改結束   */
+
   }
 
     
